@@ -2,11 +2,11 @@
 
 Audit supplied authorization decisions for cross-tenant access failures.
 
-**Status:** implemented browser-local research prototype. Automated tests can be reproduced with the command below. Deployment status is recorded separately; a planned URL is not proof of a working deployment.
+**Status:** implemented browser-local research prototype. Automated tests can be reproduced with the command below. GitHub Pages deployed and browser smoke checks completed on 19 November 2026.
 
 ## Website
 
-Intended GitHub Pages address: https://royalpuskar.github.io/tenant-isolation-checker/
+Live website: https://royalpuskar.github.io/tenant-isolation-checker/
 
 ## Problem and approach
 
@@ -76,6 +76,8 @@ Offline fixture audit only; sends no probes and does not verify a real service.
 The interface shares a portfolio design system, while this repository has its own domain engine, fixture, and tests. No accuracy, novelty, production-readiness, or 4K visual-test claim is made. Large-screen CSS is not a substitute for device testing.
 
 ## Validation
+
+Three local test cases passed on 19 November 2026. Browser checks verified initial results, invalid-input errors, stale-export prevention, and reset. These are smoke checks, not exhaustive browser coverage.
 
 `test.mjs` checks domain outcomes and edge cases, deterministic behavior, input preservation, malformed roots, and size limits. GitHub Actions runs the same suite. Review the tests themselves to see exactly what is covered; passing these checks does not establish security or exhaustive correctness.
 
